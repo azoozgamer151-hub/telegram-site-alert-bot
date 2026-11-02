@@ -1,0 +1,26 @@
+{
+  "telegram_token": "",
+  "chat_id": "",
+  "interval_seconds": 600,
+  "delay_seconds": 1,
+  "max_alerts_per_check": 20,
+  "watches": [
+    {
+      "name": "Books - Travel",
+      "urls": ["https://books.toscrape.com/catalogue/category/books/travel_2/index.html"],
+      "selectors": {
+        "item": "article.product_pod",
+        "title": "h3 a",
+        "title_attr": "title",
+        "link": "h3 a",
+        "price": "p.price_color",
+        "stock": "p.availability",
+        "in_stock_text": "in stock"
+      },
+      "alert_new": true,
+      "alert_price_drop": true,
+      "alert_back_in_stock": true,
+      "target_price": null
+    }
+  ]
+}
